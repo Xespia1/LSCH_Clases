@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-4">
+  <h3 class="mb-4 fw-bold text-center">Lecciones disponibles (Nivel {{ nivel }})</h3>
+
+  <div class="row">
+    {% for leccion in lecciones %}
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">{{ leccion.titulo }}</h5>
+            <p class="card-text">{{ leccion.descripcion }}</p>
+            <a href="{% url 'ver_leccion' leccion.pk %}" class="btn btn-primary">Ver Lección</a>
+          </div>
+        </div>
+      </div>
+    {% empty %}
+      <p class="text-center">No hay lecciones disponibles para este nivel.</p>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

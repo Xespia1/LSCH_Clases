@@ -1,0 +1,27 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #e6ecf3, #f8fbff);
+  height: 100vh;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 20px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+  padding: 30px;
+}
+
+.btn-primary:hover {
+  background-color: #476ca4;
+  transform: scale(1.03);
+}
+
+a {
+  color: #5c80bc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
